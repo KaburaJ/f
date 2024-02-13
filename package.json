@@ -1,0 +1,53 @@
+{
+  "name": "fetro",
+  "displayName": "fetro",
+  "description": "Your favourite image slider for boosting productivity",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.54.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "fetro.showImageSlider",
+        "title": "fetro"
+      }
+    ],
+    "views": {
+      "explorer": [
+        {
+          "id": "fetroStyleView",
+          "name": "Fetro Style"
+        }
+      ]
+    },
+    "viewsWelcome": [
+      {
+        "view": "fetroStyleView",
+        "contents": "Welcome to Fetro! [learn more](https://google.com/).\n[Get Started](command:fetro.showImageSlider)"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.6",
+    "@types/node": "18.x",
+    "@types/vscode": "^1.54.0",
+    "@vscode/test-cli": "^0.0.4",
+    "@vscode/test-electron": "^2.3.9",
+    "eslint": "^8.56.0",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.12",
+    "jsdom": "^24.0.0"
+  }
+}
