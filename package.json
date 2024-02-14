@@ -15,6 +15,10 @@
       {
         "command": "fetro.showImageSlider",
         "title": "fetro"
+      },
+      {
+        "command": "selectCollection", 
+        "title": "fetro select collection"
       }
     ],
     "views": {
@@ -32,6 +36,9 @@
       }
     ]
   },
+  "activationEvents": [
+    "onCommand:fetro.showImageSlider"
+],
   "scripts": {
     "lint": "eslint .",
     "pretest": "npm run lint",
